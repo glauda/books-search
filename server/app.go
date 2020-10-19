@@ -23,7 +23,7 @@ func main() {
 	handler := HttpHandler{}
 
 	// listen and serve
-	http.ListenAndServe(":9000", handler)
+	http.ListenAndServe(":8080", handler)
 }
 
 func Hello(name string) string{
