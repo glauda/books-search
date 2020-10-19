@@ -1,5 +1,7 @@
 # books-search
 
+Personnal projet. The goal is to build a search engine to find content in books using a go server and a postgres database.
+
 ## Command line instructions 
 
 In the folder containing go files (**/server**)
