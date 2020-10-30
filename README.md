@@ -18,7 +18,7 @@ go build -o main .
 ./main
 ```
 
-The result of the server can be seen at http://localhost:9000/ 
+The result of the server can be seen at http://localhost:8080/ 
 
 ## Docker instructions
 
