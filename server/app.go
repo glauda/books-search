@@ -4,17 +4,18 @@ import (
 	"net/http"
 //	"fmt"
 	"log"
-	"io/ioutil"
-	"html/template"
-	"regexp"
-	"errors"
+//	"io/ioutil"
+//	"html/template"
+//	"regexp"
+//	"errors"
 )
 
 // global variables
-var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
-var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
+//var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
+//var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
 
 // wiki tutorial (official go website)
+/*
 type Page struct {
     Title string
     Body  []byte
@@ -37,7 +38,7 @@ func loadPage(title string) (*Page, error) {
 
 
 func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
-	err := templates.ExecuteTemplate(w, tmpl + ".html", p)
+	err := templates.ExecuteTemplate(w, "./static/" + tmpl + ".html", p)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
@@ -93,12 +94,15 @@ func makeHandler(fn func (http.ResponseWriter, *http.Request, string)) http.Hand
 		fn(w, r, m[2])
 	}
 }
+*/
 
 func main() {
 
-	http.HandleFunc("/view/", makeHandler(viewHandler))
-	http.HandleFunc("/edit/", makeHandler(editHandler))
-	http.HandleFunc("/save/", makeHandler(saveHandler))
+	http.Handle("/", http.FileServer(http.Dir("./static")))
+
+	// http.HandleFunc("/view/", makeHandler(viewHandler))
+	// http.HandleFunc("/edit/", makeHandler(editHandler))
+	// http.HandleFunc("/save/", makeHandler(saveHandler))
 	
 	log.Fatal(http.ListenAndServe(":8080", nil))
 	
