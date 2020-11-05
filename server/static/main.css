@@ -1,0 +1,14 @@
+/* 
+https://colorhunt.co/palettes/dark
+https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637
+*/
+
+body {
+  background-color: #121212
+}
+
+.main-container {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+} 

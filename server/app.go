@@ -2,7 +2,7 @@ package main
 
 import (
 	"net/http"
-//	"fmt"
+	"fmt"
 	"log"
 //	"io/ioutil"
 //	"html/template"
@@ -98,12 +98,17 @@ func makeHandler(fn func (http.ResponseWriter, *http.Request, string)) http.Hand
 
 func main() {
 
-	http.Handle("/", http.FileServer(http.Dir("./static")))
+	// http.Handle("/", http.FileServer(http.Dir("./static")))
+
+	// serve production react app
+	// caution: go run app.go must be executed in server/
+	http.Handle("/", http.FileServer(http.Dir("../client/build")))
 
 	// http.HandleFunc("/view/", makeHandler(viewHandler))
 	// http.HandleFunc("/edit/", makeHandler(editHandler))
 	// http.HandleFunc("/save/", makeHandler(saveHandler))
 	
+	fmt.Println("Starting server on the port 8080...")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 	
 }
