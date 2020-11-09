@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
 import React from 'react';
 import { Button } from '@material-ui/core';
+import ButtonAppBar from './ButtonAppBar.js';
+import FormSearch from './Form.js' 
 
 function App() {
   return (
@@ -22,7 +24,8 @@ function App() {
         </a>
       </header>
     */}
-      <Button color="primary">Hello World</Button>
+      <ButtonAppBar/>
+      <FormSearch style={{"margin-top": "50px"}} />
     </div>
     
   );
