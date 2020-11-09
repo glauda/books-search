@@ -22,18 +22,19 @@ export default function FormSearch() {
   const classes = useStyles();
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
-        
-        <Grid container spacing={2}>
-            <Grid item xs>
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-            </Grid>
-            <Grid item xs>
-                <Button color="primary">Search</Button>
-            </Grid>
-        </Grid>
-  
-  { /*  <Grid>
+    <div style={{ display: 'inline-flex' , "margin-top": '50px' }}>
+      <div>
+        <TextField id="outlined-basic" label="What are you looking for?" variant="outlined" />        
+      </div>
+      <div style={{ display: 'inline-flex', 'margin-left': '20px'}}>
+        <Button color="primary">Search</Button>
+      </div>
+    </div>
+  );
+  { /*  
+      <form className={classes.root} noValidate autoComplete="off"></form> 
+    
+    <Grid>
             <Row>
                 <Cell>
                     <TextField id="outlined-basic" label="Outlined" variant="outlined" />
@@ -43,8 +44,8 @@ export default function FormSearch() {
                 </Cell>
             </Row>
         </Grid>
-        */}
+        */ }
 
-    </form>
-  );
+    
+  
 }
