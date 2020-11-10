@@ -22,7 +22,7 @@ export default function FormSearch() {
   const classes = useStyles();
 
   return (
-    <div style={{ display: 'inline-flex' , "margin-top": '50px' }}>
+    <div style={{ display: 'inline-flex' , "margin-top": '50px' , "margin-bottom": '20px' }}>
       <div>
         <TextField id="outlined-basic" label="What are you looking for?" variant="outlined" />        
       </div>
