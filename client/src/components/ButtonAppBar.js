@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from '@material-ui/core/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
 import { Tooltip } from '@material-ui/core';
 
@@ -42,9 +43,9 @@ export default function ButtonAppBar() {
             </IconButton>  
           </Tooltip>
           <Typography variant="h4" className={classes.title}>Books search</Typography>
-          <Tooltip title="Toogle light/dark theme">
-            <IconButton color="inherit" >
-              <InvertColorsIcon />
+          <Tooltip title="Linkedin">
+            <IconButton href="https://www.linkedin.com/in/florent-glauda/" color="inherit" target="_blank" >
+              <LinkedInIcon />
             </IconButton>  
           </Tooltip>
           {/* 
